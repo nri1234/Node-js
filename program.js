@@ -8,10 +8,17 @@ process.stdin.on('readable', function () {
                 process.stdout.write('Quitting app!\n');
                 process.exit();
                 break;
-            default:
-                process.stderr.write(' Hello!\n Wrong instruction!\n');
+            case 'version':
                 process.stdout.write('\nVersion: ' + process.versions.node);
+                break;
+            case 'language':
                 process.stdout.write('\nLanguage: ' + process.env.LANG);
+                break;
+            case 'sayhello':
+                process.stdout.write('hello! :)\n');
+                break;
+            default:
+                process.stderr.write(' Sorry!\n Wrong instruction!\n');
         };
     }
 });
