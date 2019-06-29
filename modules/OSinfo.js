@@ -1,5 +1,5 @@
-var os = require('os');
-var ShapeTime = require('./Time');
+var os = require('os'),
+    Time = require('./Time');
 
 function getOSinfo() {
     var type = os.type();
@@ -15,7 +15,7 @@ function getOSinfo() {
     console.log('System:', type);
     console.log('Release:', release);
     console.log('CPU model:', cpu);
-    console.log('Uptime: ~', Time.print(uptime));
+    console.log('Uptime: ~', uptime);
     console.log('User name:', userInfo.username);
     console.log('Home dir:', userInfo.homedir);
 }
