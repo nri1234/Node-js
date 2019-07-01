@@ -8,13 +8,13 @@ process.stdin.on('readable', function () {
                 process.stdout.write('Quitting app!\n');
                 process.exit();
                 break;
-            case 'version':
+            case '/version':
                 process.stdout.write('\nVersion: ' + process.versions.node);
                 break;
-            case 'language':
+            case '/language':
                 process.stdout.write('\nLanguage: ' + process.env.LANG);
                 break;
-            case 'sayhello':
+            case '/sayhello':
                 process.stdout.write('hello! :)\n');
                 break;
             default:
